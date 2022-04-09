@@ -13,7 +13,7 @@ WHAT ITS GOING TO RETURN?
 - ITS GOING TO RETURN TITLE , DESCRIPTION , THUMBNAIL and VIDEO ID of the results    
 
 FLAWS AND WARNINGS-    
-you can only search for about 100 times a day due to youtube data api quota  
-Playlists are not supported
+- you can only search for about 100 times a day due to youtube data api quota  
+- Playlists are not supported
 
 
