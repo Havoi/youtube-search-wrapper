@@ -5,13 +5,13 @@ app = Flask(__name__)
 API_ROUTE  = 'https://youtube.googleapis.com/youtube/v3/search'
 API_KEY = 'your google console api key here'
 
-@app.route('/<results>/<query>/<API_KEY>')
+@app.route('/<results>/<query>/')
 def main(query,results,key):
     
         
     
         
-    response = req(query,results,key)
+    response = req(query,results)
     
     titles = []
     ids = []
@@ -39,8 +39,8 @@ def main(query,results,key):
     return jsonify(data)
     
         
-def req(query , max_results,key):
-    response = requests.get(f'{API_ROUTE}?part=snippet&q={query}&maxResults={max_results}&key={key}')
+def req(query , max_results):
+    response = requests.get(f'{API_ROUTE}?part=snippet&q={query}&maxResults={max_results}&key={API_KEY}')
     response = response.text
     
     response = json.loads(response)
